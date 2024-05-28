@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "dayjs": "^1.11.11",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.0",
+    "mysql2": "^3.9.8",
+    "yup": "^1.4.0"
+  }
+}
