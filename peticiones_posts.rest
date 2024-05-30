@@ -1,36 +1,36 @@
-@PORT = 3000
+@PORT = 3306
 @HOST = http://localhost:{{PORT}}
 
 ### Get All posts
 GET {{HOST}}/api/posts
 
 ### Get post by Id
-GET {{HOST}}/api/posts/61
+GET {{HOST}}/api/posts
 
 ### Get posts by Autor_id
-GET {{HOST}}/api/posts/autor/20
+GET {{HOST}}/api/posts/autor
 
 ### Create post
 POST {{HOST}}/api/posts
 Content-Type: application/json
 
 {
-  "titulo": "El Don Quijote 2", //cambiar
-  "descripcion" : "Un post repetido y muy larguito que se me ha ido de las manos",
-  "categoria" : "libros",
-  "autores_id" : "43"
+  "titulo": "",
+  "descripcion" : "",
+  "categoria" : "",
+  "autores_id" : ""
   }
 
 ### Update post
-PUT {{HOST}}/api/posts/61
+PUT {{HOST}}/api/posts
 Content-Type: application/json
 
 {
-    "titulo": "El Don Quijote", //cambiar
-    "descripcion": "Un post un poco larguito que se me ha ido de las manos",
-    "categoria": "libros",
-    "autores_id": 20
+    "titulo": "", 
+    "descripcion": "",
+    "categoria": "",
+    "autores_id": ""
   }
 
 ### Delete post by Id
-DELETE {{HOST}}/api/posts/42
+DELETE {{HOST}}/api/posts

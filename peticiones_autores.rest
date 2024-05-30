@@ -1,4 +1,4 @@
-@PORT = 3000
+@PORT = 3306
 
 @HOST = http://localhost:{{PORT}}
 
@@ -6,7 +6,7 @@
 GET {{HOST}}/api/autores
 
 ### Get Autor by Id
-GET {{HOST}}/api/autores/75
+GET {{HOST}}/api/autores
 
 ### Create Autor
 POST {{HOST}}/api/autores
@@ -19,7 +19,7 @@ Content-Type: application/json
   }
 
 ### Añadir Autor***
-PUT {{HOST}}/api/autores/43
+PUT {{HOST}}/api/autores
 Content-Type: application/json
 
 {
@@ -29,4 +29,4 @@ Content-Type: application/json
 }
 
 ### Borrar Autor by Id
-DELETE {{HOST}}/api/autores/1
+DELETE {{HOST}}/api/autores
