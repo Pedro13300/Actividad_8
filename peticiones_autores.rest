@@ -1,32 +1,33 @@
 @PORT = 3306
-
 @HOST = http://localhost:{{PORT}}
 
-### Get All Autors
+
 GET {{HOST}}/api/autores
 
-### Get Autor by Id
-GET {{HOST}}/api/autores
+### Obtener autor por ID
+GET {{HOST}}/api/autores/1
 
-### Create Autor
+### Crear autor
 POST {{HOST}}/api/autores
 Content-Type: application/json
 
 {
-  "nombre": "Miguel de Cervantes Saavedra Postumo", //cambiar
-  "email" : "miki_1616@pigeonmail.com",
-  "imagen" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Cervantes_J%C3%A1uregui.jpg/800px-Cervantes_J%C3%A1uregui.jpg"
-  }
+  "nombre": "Juan Perez", 
+  "email" : "juanperez@example.com",
+  "imagen" : "imagen1.jpg"
+}
 
-### Añadir Autor***
-PUT {{HOST}}/api/autores
+### Actualizar autor
+# Necesitas especificar el ID del autor que quieres actualizar
+PUT {{HOST}}/api/autores/6
 Content-Type: application/json
 
 {
-  "nombre": "Miguel de Cervantes Saavedra Postumo", //cambiar
-  "email" : "miki_1616@paradisemail.com",
-  "imagen" : "https://i.pinimg.com/originals/69/87/1f/69871f48dc24be3c8d304e023e6731d2.jpg"
+  "nombre": "Sofia Fernandez",
+  "email" : "sofiafernandez@example.com",
+  "imagen" : "imagen6.jpg"
 }
 
-### Borrar Autor by Id
-DELETE {{HOST}}/api/autores
+### Borrar autor por ID
+# Necesitas especificar el ID del autor que quieres borrar
+DELETE {{HOST}}/api/autores/1
