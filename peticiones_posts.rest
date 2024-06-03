@@ -1,36 +1,36 @@
-@PORT = 3306
+@PORT = 3307
 @HOST = http://localhost:{{PORT}}
 
-### Get All posts
+### 
 GET {{HOST}}/api/posts
 
-### Get post by Id
-GET {{HOST}}/api/posts
+### 
+GET {{HOST}}/api/posts/7
 
-### Get posts by Autor_id
-GET {{HOST}}/api/posts/autor
+### 
+GET {{HOST}}/api/posts/autor/2
 
-### Create post
+### 
 POST {{HOST}}/api/posts
 Content-Type: application/json
 
 {
-  "titulo": "",
-  "descripcion" : "",
-  "categoria" : "",
-  "autores_id" : ""
+  "titulo": "Formula 1",
+  "descripcion" : "Estamos esperando que empiece la temporada de F1, y que Fernando Alonso vuelva a ganar un campeonato",
+  "categoria" : "Deporte",
+  "autor_id" : "17"
   }
 
-### Update post
+### 
 PUT {{HOST}}/api/posts
 Content-Type: application/json
 
 {
-    "titulo": "", 
-    "descripcion": "",
-    "categoria": "",
-    "autores_id": ""
+    "titulo": "Los secretos de la cocina italiana 2", 
+    "descripcion": "Un viaje culinario a través de la cocina italiana. Desde la pizza napolitana hasta la pasta fresca, descubre los secretos de la auténtica cocina italiana.",
+    "categoria": "Cocina",
+    "autor_id": "2"
   }
 
-### Delete post by Id
-DELETE {{HOST}}/api/posts
+### 
+DELETE {{HOST}}/api/posts/13

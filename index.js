@@ -1,4 +1,3 @@
-//crear y levantar server
 const http = require('node:http');
 
 const app = require('./src/app');
@@ -9,7 +8,7 @@ require ('./src/config/db')
 
 const server = http.createServer(app);
 
-const PORT = process.env.PORT || 3306;
+const PORT = process.env.PORT || 3307;
 
 server.listen(PORT);
 

@@ -30,10 +30,11 @@ const updateById = (autor_id, { nombre, email, imagen }) => {
 };
 
 
-const deleteById = (autor_id) => {
-    return db.query("delete from autores where id = ?", [autor_id]);
-};
+const deleteById = async (autor_id) => {
+    await db.query('delete from posts where autor_id = ?', [autor_id]);
 
+    return db.query('delete from autores where id = ?', [autor_id]);
+}
   
 module.exports = {
     selectAll,

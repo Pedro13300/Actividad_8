@@ -7,7 +7,6 @@ const getAllPosts = async (req, res, next) => {
     try {
       const [posts] = await Posts.selectAll();
   
-      // Obtiene los autores de cada post y los añade a la respuesta
       const result = []
       for (let post of posts) {
         const autor_id = post.autores_id;
@@ -31,7 +30,6 @@ const getAllPosts = async (req, res, next) => {
       }
       const post = postResult[0]
   
-      // recupera el autor del post y obtiene su información para añadirla a la respueusta
       const autor_id = postResult[0].autores_id
       const [[autor]] = await Autores.selectById(autor_id)
       
@@ -58,15 +56,6 @@ const getAllPosts = async (req, res, next) => {
 
 
   const createPost = async (req, res, next) => {
-
-    const { categoria } = req.body
-    
-    // verifica que la categoría existe en el set definido en BBDD 
-    try {
-      await checkCategoria(categoria)
-    } catch (error) {
-      res.status(400).send(error.message)
-    }
     
     try {
       const [result] = await Posts.insertNew(req.body);

@@ -1,6 +1,7 @@
 const Autores = require("../models/autores.model");
 
 
+
 const getAllAutores = async (req, res, next) => {
     try {
       const [result] = await Autores.selectAll();
